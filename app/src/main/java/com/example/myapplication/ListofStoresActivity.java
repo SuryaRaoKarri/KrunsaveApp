@@ -67,6 +67,8 @@ public class ListofStoresActivity extends AppCompatActivity {
             try{
                 url = new URL(urls[0]);
                 urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection.setRequestProperty("Content-Type", "application.json");
+                urlConnection.setRequestProperty("Authorization", "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4IiwidW5pcXVlX25hbWUiOiJhZG1pbjRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwidXNlcklEIjoiOCIsIm5iZiI6MTU1MjY1MzI3NCwiZXhwIjoxNTUyNzM5Njc0LCJpYXQiOjE1NTI2NTMyNzR9.CvMN9LcbRyj-AJEf6UEolTppUKYE_oRQv5bBFTQROBenyxIVlnWW3e5cl5SGU6AEdRIx4e6J7ZlCt8D29frK1A");
                 InputStream in = urlConnection.getInputStream();
                 InputStreamReader reader = new InputStreamReader(in);
                 int data = reader.read();
