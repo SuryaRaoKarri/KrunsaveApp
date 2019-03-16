@@ -133,6 +133,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    //Download Task End
+
+
+
 
     //Add Permision Maps
 

@@ -4,4 +4,11 @@
     <string name="longitude">Longitude</string>
     <string name="button">Button</string>
     <string name="krunsave">Krunsave!</string>
+    <string name="UserEmail" />
+    <string name="useremail">UserEmail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="or">OR</string>
+    <string name="view_stores">View Stores</string>
 </resources>
