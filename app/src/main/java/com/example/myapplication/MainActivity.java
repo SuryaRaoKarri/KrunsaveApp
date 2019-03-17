@@ -30,6 +30,10 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Global Variables to access them in all files
+    String jwtKey = "";
+    //Global Variables to access then in all files End
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +77,26 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+//Oncreate end
+
+    ///Login button start
+    public void Login(View view){
+        Toast.makeText(MainActivity.this, "Coming Soon!!", Toast.LENGTH_LONG).show();
+    }
+    //Login button End
+
+    ///Register button start
+    public void Register(View view){
+        Toast.makeText(MainActivity.this, "Coming Soon!!", Toast.LENGTH_LONG).show();
+    }
+    //Register button End
+
+    //View store start
+    public void Viewstorepage(View view){
+        Intent intent = new Intent(getApplicationContext(), ListofStoresActivity.class);
+        startActivity(intent);
+    }
+    //View store end
 
     public void ShowReq(View view){
 //        DownloadTask task = new DownloadTask();
@@ -85,15 +109,13 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), lat.getText(), Toast.LENGTH_LONG).show();
         Toast.makeText(getApplicationContext(), lng.getText(), Toast.LENGTH_LONG).show();
         Toast.makeText(getApplicationContext(), userLocation, Toast.LENGTH_LONG).show();
-
-        Intent intent = new Intent(getApplicationContext(), ListofStoresActivity.class);
-        startActivity(intent);
-
     }
+
     String userLocation="";
     String result = "";
     URL url;
     HttpURLConnection urlConnection = null;
+
     public class DownloadTask extends AsyncTask<String, Void, String>{
 
         @Override
@@ -136,10 +158,7 @@ public class MainActivity extends AppCompatActivity {
     //Download Task End
 
 
-
-
-    //Add Permision Maps
-
+    //Add Permission Maps
     LocationManager locationManager;
     LocationListener locationListiner;
     @Override
@@ -154,4 +173,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+    //Add permission maps End
 }
